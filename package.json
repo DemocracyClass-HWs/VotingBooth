@@ -1,0 +1,28 @@
+{
+  "name": "voting-booth",
+  "version": "1.0.0",
+  "description": "Voting booth backend code",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DemocracyClass-HWs/VotingBooth.git"
+  },
+  "keywords": [
+    "voting",
+    "booth",
+    "backend",
+    "db"
+  ],
+  "author": "Peyman Mortazavi <pey.mortazavi@gmail.com> (https://www.linkedin.com/pub/peyman-mortazavi/50/b51/73b)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DemocracyClass-HWs/VotingBooth/issues"
+  },
+  "homepage": "https://github.com/DemocracyClass-HWs/VotingBooth#readme",
+  "dependencies": {
+    "express": "^4.13.3"
+  }
+}
