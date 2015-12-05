@@ -51,8 +51,10 @@ io.on('connection', function(socket) {
       io.emit('welcome', JSON.stringify(welcomeBlob))
   })
 
-  socket.on('sparkcloud-creds', function() {
+  socket.on('sparkcloud-creds', function(msg) {
+    console.log('Received creds request')
     io.emit('sparkcloud-creds', {username: process.env.spark_username, password: process.env.spark_pass})
+    console.log({username: process.env.spark_username, password: process.env.spark_pass})
   })
 
   socket.on('vote_submission', function(msg) {
