@@ -3,7 +3,7 @@ var http = require('http').Server(app);
 var io = require('socket.io')(http);
 var mongo = require('mongodb').MongoClient;
 
-if( !process.env.mongo_url) {
+if( !process.env.mongo_url ) {
   console.error("Environment variables are not set. Set variables before running.");
   process.exit(0)
 }
@@ -49,6 +49,10 @@ io.on('connection', function(socket) {
       };
 
       io.emit('welcome', JSON.stringify(welcomeBlob))
+  })
+
+  socket.on('sparkcloud-creds', function() {
+    io.emit('sparkcloud-creds', {username: process.env.spark_username, password: process.env.spark_pass})
   })
 
   socket.on('vote_submission', function(msg) {
