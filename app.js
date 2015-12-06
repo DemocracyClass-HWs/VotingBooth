@@ -49,7 +49,7 @@ io.on('connection', function(socket) {
       };
 
       io.emit('welcome', JSON.stringify(welcomeBlob))
-      io.emit('sparkcloud-creds', JSON.stringify({username: process.env.spark_username, password: process.env.spark_pass}))
+      io.emit('scauth', JSON.stringify({username: process.env.spark_username, password: process.env.spark_pass}))
   })
 
   socket.on('vote_submission', function(msg) {
