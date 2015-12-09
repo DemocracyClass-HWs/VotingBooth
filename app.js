@@ -57,6 +57,7 @@ io.on('connection', function(socket) {
     // validate the submission
     try {
         msg = JSON.parse(msg)
+        console.log(msg)
         if(!msg.policy_id || !msg.candidate_id) {
           console.error("Vote submission is invalid.")
           return
