@@ -52,7 +52,7 @@ io.on('connection', function(socket) {
       io.emit('scauth', JSON.stringify({username: process.env.spark_username, password: process.env.spark_pass}))
   })
 
-  socket.on('vote_submission', function(msg) {
+  socket.on('votesubmission', function(msg) {
     console.log("New vote submitted: " + msg)
     // validate the submission
     try {
