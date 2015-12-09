@@ -28,11 +28,11 @@ io.on('connection', function(socket) {
       var policiesDict = {}
 
       for(var i = 0; i < policies.length; i++) {
-        policiesDict[policies[i].id] = 0
+        policiesDict[policies[i]._id] = 0
       }
 
       for(var i = 0; i < candidates.length; i++) {
-        candidatesDict[candidates[i]] = 0
+        candidatesDict[candidates[i]._id] = 0
       }
 
       for(var i = 0; i < docs.length; i++) {
