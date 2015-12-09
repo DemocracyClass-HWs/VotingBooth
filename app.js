@@ -76,7 +76,8 @@ io.on('connection', function(socket) {
         })
     } catch(ex) {
       // ignore it
-      console.error("Vote submission is invalid.")
+      console.error("Vote submission is invalid due to error: ")
+      console.error(ex)
     }
   });
 });
