@@ -56,8 +56,8 @@ io.on('connection', function(socket) {
           stats: {candidates: candidatesDict, policies: policiesDict}
       };
 
-      io.emit('welcome', JSON.stringify(welcomeBlob))
-      io.emit('scauth', JSON.stringify({username: process.env.spark_username, password: process.env.spark_pass}))
+      socket.emit('welcome', JSON.stringify(welcomeBlob))
+      socket.emit('scauth', JSON.stringify({username: process.env.spark_username, password: process.env.spark_pass}))
   })
 
   socket.on('votesubmission', function(msg) {
