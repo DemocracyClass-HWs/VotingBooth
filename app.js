@@ -53,7 +53,7 @@ io.on('connection', function(socket) {
   })
 
   socket.on('votesubmission', function(msg) {
-    console.log("New vote submitted: " + msg)
+    console.log("New vote submitted: " + JSON.stringify(msg))
     // validate the submission
     try {
         msg = JSON.parse(msg)
